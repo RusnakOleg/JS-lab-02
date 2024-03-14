@@ -1,4 +1,4 @@
-var r = confirm("Готові гризти граніт науки?");
+var r = confirm("Готові до нового навчального року?");
 if (r == true) {
     myTxt.innerHTML = "ВПЕРЕД ДО ЗНАНЬ!";
 } else {

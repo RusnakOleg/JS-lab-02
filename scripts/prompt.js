@@ -9,7 +9,7 @@ for (var i = 0; i < myFont.length; i++) {
 // ---- Записуємо в об’єкт myTxt значення 'Привіт, студенте!'
 myTxt.innerHTML = 'Привіт, cтуденте!';
 // ---- Присвоюємо змінній person значення яке введе користувач з клавіатури
-var person = prompt('Як Вас звати');
+var person = prompt('Введіть ваше ім\'я');
 if (person != null) {
     myTxt.innerHTML = "Я вітаю Вас " + person + "!" + "<br>" + " ";
 }
