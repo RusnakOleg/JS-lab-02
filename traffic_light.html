@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Traffic light</title>
+    <style>
+        .traffic-light {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+        .light {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 10px;
+            border: 2px solid black;
+        }
+        #red { background-color: red; }
+        #yellow { background-color: yellow; }
+        #green { background-color: green; }
+    </style>
+</head>
+<body>
+    <div class="traffic-light">
+        <div class="light" id="red"></div>
+        <div class="light" id="yellow"></div>
+        <div class="light" id="green"></div>
+    </div>
+
+    <script>
+        function changeLights() {
+            var red = document.getElementById('red');
+            var yellow = document.getElementById('yellow');
+            var green = document.getElementById('green');
+
+            red.style.backgroundColor = 'red';
+            yellow.style.backgroundColor = 'transparent';
+            green.style.backgroundColor = 'transparent';
+
+            setTimeout(function() {
+                red.style.backgroundColor = 'transparent';
+                yellow.style.backgroundColor = 'yellow';
+            }, 2500);
+
+            setTimeout(function() {
+                yellow.style.backgroundColor = 'transparent';
+                green.style.backgroundColor = 'green';
+            }, 5000);
+
+            setTimeout(changeLights, 7500);
+        }
+
+        changeLights();
+    </script>
+</body>
+</html>
