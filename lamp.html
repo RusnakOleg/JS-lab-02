@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Examples</title>
+</head>
+<style>
+    .lamp {
+        width: 100px;
+        height: 100px;
+        background-color: white;
+        border-radius: 50%;
+        border: 3px solid black;
+        margin-bottom: 20px;
+        transition: background-color 0.3s ease;
+    }
+</style>
+</head>
+<body>
+<div class="lamp" id="lamp"></div>
+<button onclick="switchOn()">Включити</button>
+<button onclick="switchOff()">Вимкнути</button>
+
+<script>
+    function switchOn() {
+        document.getElementById('lamp').style.backgroundColor = 'yellow';
+    }
+
+    function switchOff() {
+        document.getElementById('lamp').style.backgroundColor = 'white';
+    }
+</script>
+</body>
+</html>
